@@ -1,0 +1,68 @@
+//html {
+//  &::-webkit-scrollbar {
+//    width: 0;
+//    background-color: #000;
+//    //background-color: $text-color;
+//  }
+//
+//  &::-webkit-scrollbar-thumb {
+//    background-color: #f980fe;
+//    border-radius: 100px;
+//  }
+//}
+
+html,
+body,
+a,
+p,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+textarea {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.ant-input-affix-wrapper > input.ant-input:focus,
+input:hover,
+input:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+

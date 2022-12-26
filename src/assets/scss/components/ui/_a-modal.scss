@@ -1,0 +1,50 @@
+.c-modal-remove {
+  .ant-modal-body {
+    padding: 100px 120px 87px !important;
+    border-radius: 6px;
+  }
+  .ant-modal-content {
+    border-radius: 6px;
+  }
+  .ant-modal-confirm {
+    &-body {
+      .anticon {
+        @apply hidden;
+      }
+      & .ant-modal-confirm-title {
+        @apply text-[24px] leading-[1.15] text-center;
+      }
+    }
+    & &-btns {
+      @apply flex justify-center float-none #{!important};
+    }
+  }
+  .ant-modal-confirm .ant-modal-confirm-btns {
+    float: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 51px;
+
+    button {
+      width: 140px;
+      height: 50px;
+      border-radius: 6px;
+    }
+  }
+
+  &_confirm-danger {
+    .ant-modal-confirm .ant-modal-confirm-btns {
+      button:last-child {
+        @apply bg-peach text-white;
+      }
+    }
+  }
+
+  &_warning {
+    .ant-modal-confirm .ant-modal-confirm-btns {
+      button:first-child {
+        @apply hidden;
+      }
+    }
+  }
+}
