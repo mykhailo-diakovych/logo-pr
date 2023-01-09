@@ -235,18 +235,26 @@ const onSubmit = async () => {
 
     isLoading.value = true;
 
-    isEditable.value
-      ? await updateResource(
-          selectedResourceId.value,
-          payload.knowledgeResourceRequest
-        )
-      : await onCreate(payload);
-
-    isLoading.value = false;
-
-    isModalActive.value = false;
+    try {
+      isEditable.value
+        ? await updateResource(
+            selectedResourceId.value,
+            payload.knowledgeResourceRequest
+          )
+        : await onCreate(payload);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      closeModal();
+    }
   }, 500);
 };
+
+const closeModal = () => {
+  isLoading.value = false;
+  isModalActive.value = false;
+};
+
 watch(isModalActive, (active) => {
   if (!active) selectedResourceId.value = "";
   else resetFields();
