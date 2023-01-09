@@ -11,7 +11,7 @@ export const passwordValidator: Rule = {
 
 export const emailValidator: Rule = {
   message: "Email is not valid",
-  pattern: /^[a-z0-9+]+@[a-z]+\.[a-z]{2,3}$/gm,
+  pattern: /^[\w%+-]+(\.[\w%+-]+)*@[\w%+-]+(\.[\w%+-]+)+$/gm,
 };
 
 export const requiredValidator: Rule = {
