@@ -5,10 +5,14 @@ import { Task } from "~/types/tasks";
 export const useFetchStudentAvailableTasks = () => {
   const studentAvailableTasks = ref<Task[]>([]);
   const studentAvailableTasksSelectOptions = computed(() =>
-    studentAvailableTasks.value.map((task) => ({
-      label: `${task.occupation}: ${task.title}`,
-      value: task.id,
-    }))
+    studentAvailableTasks.value.map((task) => {
+      return {
+        label: task.occupation
+          ? `${task.occupation}: ${task.title}`
+          : task.title,
+        value: task.id,
+      };
+    })
   );
   const [isFetchingAvailableTasks, toggleFetchingAvailableTasks] = useToggle();
 
