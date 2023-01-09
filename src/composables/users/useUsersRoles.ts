@@ -12,9 +12,6 @@ export const useUsersRoles = () => {
   const isUserMentor = computed(
     () => currentUser.value?.role === UserRole.Mentor
   );
-  const isUserStudent = computed(
-    () => currentUser.value?.role === UserRole.Student
-  );
 
-  return { isUserAdmin, isUserMentor, isUserStudent };
+  return { isUserAdmin, isUserMentor };
 };

@@ -29,7 +29,6 @@ export interface KnowledgeSourceStatusTypes {
 export interface RoleTypes {
   ROLE_ADMIN: string;
   ROLE_MENTOR: string;
-  ROLE_STUDENT: string;
 }
 
 export interface TeamStatusTypes {

@@ -24,5 +24,4 @@ export type UsersPayload = Omit<User, "id"> & {
 export enum UserRole {
   Admin = "ROLE_ADMIN",
   Mentor = "ROLE_MENTOR",
-  Student = "ROLE_STUDENT",
 }
